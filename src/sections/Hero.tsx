@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="container-app">
         {/* Container da imagem com bordas arredondadas */}
         <div
-          className="w-full h-[500px] sm:h-[600px] lg:h-[843px] rounded-[30px] bg-cover bg-center flex flex-col items-center justify-center text-center px-6 sm:px-12 lg:px-20"
+          className="w-full h-[420px] sm:h-[500px] md:h-[600px] lg:h-[843px] rounded-[16px] sm:rounded-[30px] bg-cover bg-center flex flex-col items-center justify-center text-center px-4 sm:px-12 lg:px-20"
           style={{
             backgroundImage: `url(${verdeEffect}), url(${heroImage})`
           }}
@@ -28,7 +28,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtítulo */}
-          <p className="text-white text-base sm:text-lg lg:text-xl mb-8 lg:mb-10 max-w-3xl">
+          <p className="text-white text-sm sm:text-base lg:text-xl mb-6 lg:mb-10 max-w-3xl px-2">
             Onde líderes transformam eficiência operacional em vantagem competitiva
           </p>
 
@@ -46,16 +46,16 @@ export default function Hero() {
 
           {/* Botões de ação */}
           <div className="flex items-center gap-3">
-            <button className="w-14 h-14 bg-[#00FF9B] rounded-lg flex items-center justify-center hover:bg-[#00e68a] transition-colors cursor-pointer">
-              <div className="w-10 h-10 border-2 border-black rounded-lg flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
+            <button className="w-10 h-10 sm:w-14 sm:h-14 bg-[#00FF9B] rounded-lg flex items-center justify-center hover:bg-[#00e68a] transition-colors cursor-pointer">
+              <div className="w-7 h-7 sm:w-10 sm:h-10 border-2 border-black rounded-lg flex items-center justify-center">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2.5">
                   <path d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </div>
             </button>
             <a
               href="#inscricao"
-              className="bg-[#00FF9B] text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#00e68a] transition-colors"
+              className="bg-[#00FF9B] text-black px-5 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-sm sm:text-lg hover:bg-[#00e68a] transition-colors"
             >
               Quero participar
             </a>

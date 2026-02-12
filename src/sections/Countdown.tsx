@@ -68,7 +68,7 @@ export default function Countdown() {
                 <span className="text-2xl sm:text-4xl lg:text-6xl font-bold text-white">
                   {formatNumber(item.value)}
                 </span>
-                <span className="text-xs sm:text-sm lg:text-lg text-white mt-1">
+                <span className="text-[10px] sm:text-sm lg:text-lg text-white mt-1">
                   {item.label}
                 </span>
               </div>

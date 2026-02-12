@@ -51,7 +51,7 @@ export default function trendscast() {
                       <h3 className="text-xl sm:text-3xl lg:text-5xl italic font-bold text-[#00FF9B]">{card.name}</h3>
                       <strong className="text-base sm:text-xl lg:text-4xl">{card.role}</strong>
                       <p className="font-thin text-sm sm:text-lg lg:text-3xl max-w-full lg:max-w-[70%] leading-[130%]">{card.desc}</p>
-                      <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0.5 text-xs sm:text-sm lg:text-base font-bold text-white">in</span>
+                      <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0 text-xl sm:text-3xl lg:text-[50.14px] font-normal leading-[103%] text-white">in</span>
                     </div>
                   </div>
                 </motion.div>

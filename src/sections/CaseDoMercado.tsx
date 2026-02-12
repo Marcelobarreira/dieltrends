@@ -1,6 +1,5 @@
 import fotoex from '../assets/fotoex.png'
 import fotodir from '../assets/foto-dire.png'
-import iconlikedin from '../assets/icone-likedin.png'
 import AnimatedSection from '../components/animations/AnimatedSection'
 import StaggerContainer, { staggerItem } from '../components/animations/StaggerContainer'
 import { motion } from 'framer-motion'
@@ -28,7 +27,7 @@ export default function CaseDoMercado() {
                 <img src={fotoex} alt="foto exemplo" className="absolute left-0 top-0 z-0 h-full w-auto object-contain" />
                 <div className="relative z-10 h-full w-full max-w-[85%] sm:max-w-[70%] rounded-tl-[60px] sm:rounded-tl-[100px] lg:rounded-tl-[140px] bg-[linear-gradient(100.29deg,#00FF9B_-6.47%,#010C28_101.93%)] p-0.5">
                   <div className="flex h-full flex-col justify-center rounded-tl-[60px] sm:rounded-tl-[100px] lg:rounded-tl-[140px] bg-[#010C28] p-4 sm:p-6 text-white">
-                    <img className="h-8 w-8 sm:h-12 sm:w-12 self-end cursor-pointer" src={iconlikedin} alt="icon-likedin" />
+                    <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0.5 text-xs sm:text-sm lg:text-base font-bold text-white">in</span>
                     <strong className="block text-lg sm:text-2xl lg:text-4xl italic leading-[110%] text-[#00FF9B]">Jaime Ribeiro</strong>
                     <strong className="block text-base sm:text-xl lg:text-3xl italic">Diretor de operações da LASA</strong>
                     <p className="font-light max-w-[85%] text-sm sm:text-lg lg:text-3xl">
@@ -42,7 +41,7 @@ export default function CaseDoMercado() {
                 <img src={fotodir} alt="foto perfil" className="ml-auto h-full" />
                 <div className="absolute left-0 top-0 z-10 h-full w-full max-w-[85%] sm:max-w-[78%] rounded-tl-[60px] sm:rounded-tl-[100px] lg:rounded-tl-[140px] p-0.5">
                   <div className="h-full rounded-tr-[60px] sm:rounded-tr-[100px] lg:rounded-tr-[140px] rounded-bl-2xl bg-[#010C28] p-4 sm:p-6 text-white">
-                    <img className="h-8 w-8 sm:h-12 sm:w-12 self-end cursor-pointer" src={iconlikedin} alt="icon-likedin" />
+                    <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0.5 text-xs sm:text-sm lg:text-base font-bold text-white">in</span>
                     <p className="font-light mt-2 max-w-[85%] text-sm sm:text-lg lg:text-3xl">
                       Um espaço dedicado ao debate de 5 referencias do setor que trarão uma
                       visão ampla e inovadora sobre tema x. Conheça os painelistas:
@@ -56,7 +55,7 @@ export default function CaseDoMercado() {
                 <div className="pointer-events-none absolute inset-0 z-10 backdrop-blur-sm" />
                 <div className="relative z-20 h-full w-full max-w-[85%] sm:max-w-[75%] rounded-tl-[60px] sm:rounded-tl-[100px] lg:rounded-tl-[140px] bg-[linear-gradient(58.29deg,#00FF9B_-6.47%,#010C28_101.93%)] p-0.5">
                   <div className="flex h-full flex-col items-end rounded-tl-[60px] sm:rounded-tl-[100px] lg:rounded-tl-[140px] bg-[#010C28] p-4 sm:p-6 text-white">
-                    <img className="h-8 w-8 sm:h-12 sm:w-12 self-end cursor-pointer" src={iconlikedin} alt="icon-likedin" />
+                    <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0.5 text-xs sm:text-sm lg:text-base font-bold text-white">in</span>
                     <p className="font-light mt-2 text-right text-sm sm:text-lg lg:text-3xl text-[#FFFFFF]">
                       Um espaço dedicado ao debate de 5 referencias do setor que trarão uma
                       visão ampla e inovadora sobre tema x. Conheça os painelistas:

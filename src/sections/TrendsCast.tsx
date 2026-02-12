@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import fotocardslide from "../assets/foto-card-slide.png";
-import linkicon from "../assets/icone-likedin.png";
 import AnimatedSection from '../components/animations/AnimatedSection'
 import StaggerContainer, { staggerItem } from '../components/animations/StaggerContainer'
 
@@ -52,7 +51,7 @@ export default function trendscast() {
                       <h3 className="text-xl sm:text-3xl lg:text-5xl italic font-bold text-[#00FF9B]">{card.name}</h3>
                       <strong className="text-base sm:text-xl lg:text-4xl">{card.role}</strong>
                       <p className="font-thin text-sm sm:text-lg lg:text-3xl max-w-full lg:max-w-[70%] leading-[130%]">{card.desc}</p>
-                      <img src={linkicon} alt="" className="link-icon w-6 h-6 sm:w-8 sm:h-8 lg:w-[50px] lg:h-[50px] self-end cursor-pointer" />
+                      <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0.5 text-xs sm:text-sm lg:text-base font-bold text-white">in</span>
                     </div>
                   </div>
                 </motion.div>

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import fotocardslide from "../assets/foto-card-slide.png";
-import linkicon from "../assets/link-icon-2.png";
 import arrowaleft from "../assets/arrow-left.png";
 import arrowright from "../assets/arrow-right.png";
 import AnimatedSection from '../components/animations/AnimatedSection'
@@ -100,7 +99,7 @@ export default function Slot() {
                       <div className="content-wrapper p-4 sm:p-8 lg:p-[50.5px] rounded-tl-[60px] sm:rounded-tl-[90px] lg:rounded-tl-[120px]">
                         <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold">{slide.name}</h3>
                         <p className="font-light text-sm sm:text-lg lg:text-xl leading-5 sm:leading-7 lg:leading-8">{slide.description}</p>
-                        <img src={linkicon} alt="" className="link-icon w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 self-end mt-3 lg:mt-8 cursor-pointer" />
+                        <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0.5 text-xs sm:text-sm lg:text-base font-bold text-white mt-3 lg:mt-8">in</span>
                       </div>
                     </div>
                   </motion.div>

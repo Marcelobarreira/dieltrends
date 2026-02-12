@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import fotocardslide from "../assets/foto-card-slide.png";
-import linkicon from "../assets/link-icon-2.png";
 import arrowaleft from "../assets/arrow-left.png";
 import arrowright from "../assets/arrow-right.png";
 import AnimatedSection from '../components/animations/AnimatedSection'
@@ -86,7 +85,7 @@ export default function TrendsTalk() {
                       <div className="content-wrapper rounded-tr-[60px] sm:rounded-tr-[90px] lg:rounded-tr-[120px] px-4 pt-6 pb-4 sm:px-6 sm:pt-10 sm:pb-6 lg:px-10 lg:pt-20 lg:pb-10">
                         <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 lg:mb-6">{slide.name}</h3>
                         <p className="font-thin text-sm sm:text-lg lg:text-xl leading-5 sm:leading-7 lg:leading-8">{slide.description}</p>
-                        <img src={linkicon} alt="" className="link-icon w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 self-end mt-3 sm:mt-5 lg:mt-8 mx-2 cursor-pointer" />
+                        <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0.5 text-xs sm:text-sm lg:text-base font-bold text-white mt-3 sm:mt-5 lg:mt-8 mx-2">in</span>
                       </div>
                     </div>
                   </motion.div>

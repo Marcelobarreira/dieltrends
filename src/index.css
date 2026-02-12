@@ -31,6 +31,24 @@ body {
   padding-right: 24px;
 }
 
+.container-app-2 {
+  max-width: fit-content;
+  margin: auto;
+
+  
+
+}
+
+
+
+ .container-trend-cast{
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  
+ }
+
 @media (min-width: 640px) {
   .container-app {
     padding-left: 32px;
@@ -93,4 +111,100 @@ body {
   font-size: 24.39px;
   line-height: 100%;
   letter-spacing: -0.05em;
+}
+
+
+.trend-cast.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+
+
+.trend-cast.content .title h4{
+   font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 35.12px;
+    
+    line-height: 103%;
+    letter-spacing: -7%;
+    
+    
+}
+
+.trend-cast.content .title h1{
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Regular;
+  font-size: 80px;
+  line-height: 103%;
+  letter-spacing: -7%;
+  
+}
+
+.trend-cast.content .description p{
+    font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 34.86px;
+  line-height: 120%;
+  letter-spacing: -7%;
+  
+}
+
+.trend-cast.content .description strong{
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Regular;
+  font-size: 34.86px;
+  line-height: 120%;
+  letter-spacing: -7%;
+  
+}
+
+
+.trend-cast.slide .content-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #010C28;
+}
+
+/* .trend-cast.slide .profile-card .img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+} */
+
+.trend-cast.slide .content-wrapper .name{
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 100%;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+
+.mini-shadow{
+  position: relative;
+}
+.mini-shadow::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  border: 1px;
+  bottom: -160px;
+  z-index: 1;
+  border-radius: 16px;
+  filter: blur(4px);
+  opacity: 0.5;
+  background: radial-gradient(60% 60% at 50% 50%,
+    rgba(0,255,155,0.18) 0%,
+    rgba(0,255,155,0.08) 45%,
+    rgba(0,255,155,0) 80%);
 }

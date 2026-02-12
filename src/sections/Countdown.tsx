@@ -36,7 +36,7 @@ export default function Countdown() {
       }
     }
 
-    calculateTimeLeft()
+    // calculateTimeLeft()
     const timer = setInterval(calculateTimeLeft, 1000)
 
     return () => clearInterval(timer)

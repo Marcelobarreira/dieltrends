@@ -1,9 +1,8 @@
-import imgFormatos from '../assets/img-01.png'
 
 export default function Formatos() {
   return (
-    <section className="w-full relative" style={{ paddingTop: '80px' }}>
-      <div className="container-app">
+    <section className="w-full" style={{ paddingTop: '89px' }}>
+      <div className="container-app relative">
         {/* Título */}
         <h2
           className="text-white font-bold"
@@ -20,19 +19,14 @@ export default function Formatos() {
         </h2>
 
         {/* Imagem */}
-        <div className="w-full">
-          <img
-            src={imgFormatos}
-            alt="Formatos e temáticas"
-            className="w-full h-auto object-contain"
-            style={{ maxWidth: '100%' }}
-          />
+         <div className="w-full m-auto rounded-[20px] bg-[linear-gradient(150.71deg,rgba(0,153,93,0)_0.01%,#00FF9B_94.12%)] p-[1.7px] lg:h-full">
+          <div className="flex h-full w-full flex-col gap-10 rounded-[18px] bg-[linear-gradient(140.71deg,rgba(0,153,93,0)_30%,rgba(0,255,155,0.25)_100%),linear-gradient(#010C28,#010C28)] sm:p-15">
+             
+                 <h1 className="text-7xl font-bold max-w-[50%] mt-30">Conheça os formatos e suas <em className="text-[#00FF9B]" style={{ fontStyle: 'italic' }}>temáticas:</em></h1> 
+              
+          </div>
         </div>
-
-      </div>
-
-      {/* Conector - linha vertical */}
-      <div
+          <div
         style={{
           position: 'absolute',
           left: '26%',
@@ -43,6 +37,11 @@ export default function Formatos() {
           backgroundColor: '#00FF9B'
         }}
       />
+
+      </div>
+
+      {/* Conector - linha vertical */}
+    
     </section>
   )
 }

@@ -6,6 +6,15 @@ import Revolucionar from './sections/Revolucionar'
 import Formatos from './sections/Formatos'
 import TrendsVoice from './sections/TrendsVoice'
 import CaseDoMercado from './sections/CaseDoMercado'
+import  SlotInterativo from './sections/TrendsCast'
+import TrendCast from './sections/Slot'
+import TrendsTalk from './sections/TrendsTalk'
+import Programacao from './sections/Programacao'
+import Marcas from './sections/Marcas'
+import UltimoEvento from './sections/UltmoEvento'
+import Local from './sections/Local'
+import Sponsorship from './sections/Sporsorship'
+
 
 function App() {
   return (
@@ -20,30 +29,15 @@ function App() {
         <Formatos />
         <TrendsVoice />
         <CaseDoMercado />
+        <TrendCast />
+        <SlotInterativo />
+        <TrendsTalk />
+        <Programacao />
+        <Marcas />
+        <UltimoEvento />
+        <Local />
+        <Sponsorship />
 
-        <section id="sobre" className="w-full min-h-screen flex items-center justify-center bg-[#010C28]">
-          <div className="container-app">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Sobre</h2>
-          </div>
-        </section>
-
-        <section id="speakers" className="w-full min-h-screen flex items-center justify-center">
-          <div className="container-app">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Speakers</h2>
-          </div>
-        </section>
-
-        <section id="programacao" className="w-full min-h-screen flex items-center justify-center bg-[#010C28]">
-          <div className="container-app">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Programação</h2>
-          </div>
-        </section>
-
-        <section id="local" className="w-full min-h-screen flex items-center justify-center">
-          <div className="container-app">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">Local</h2>
-          </div>
-        </section>
       </main>
     </div>
   )

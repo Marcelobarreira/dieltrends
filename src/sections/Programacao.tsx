@@ -5,7 +5,7 @@ import arrowdown from '../assets/arrow-down.png'
 
 export default function Programacao() {
   return (
-    <section className="pt-12 sm:pt-16 lg:pt-[89px]">
+    <section id="programacao" className="pt-12 sm:pt-16 lg:pt-[89px] scroll-mt-24 lg:scroll-mt-[120px]">
 
       <div className="container-app-2 relative">
 

@@ -4,7 +4,7 @@ import lopalpic2 from '../assets/local-pic-2.png'
 
 export default function Local() {
   return (
-    <section className="w-full pt-12 sm:pt-16 lg:pt-[89px]">
+    <section id="local" className="w-full pt-12 sm:pt-16 lg:pt-[89px] scroll-mt-24 lg:scroll-mt-[120px]">
 
       <div className="container-app relative">
 

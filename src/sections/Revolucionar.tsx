@@ -1,6 +1,6 @@
 export default function Revolucionar() {
   return (
-    <section className="w-full py-10 sm:py-16 lg:py-20">
+    <section id="sobre" className="w-full py-10 sm:py-16 lg:py-20 scroll-mt-24 lg:scroll-mt-[120px]">
       <div className="container-app">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-[60px]">
           {/* Lado esquerdo */}

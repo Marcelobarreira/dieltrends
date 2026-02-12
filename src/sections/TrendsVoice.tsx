@@ -2,7 +2,7 @@ import cielo from  "../assets/cesar-cielo.png";
 
 export default function TrendsVoice() {
   return (
-    <section className="w-full pt-12 sm:pt-16 lg:pt-[89px]">
+    <section id="speakers" className="w-full pt-12 sm:pt-16 lg:pt-[89px] scroll-mt-24 lg:scroll-mt-[120px]">
       {/* Conector */}
 
       <div className="container-app relative">

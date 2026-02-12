@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import fotocardslide from "../assets/foto-card-slide.png";
 import linkicon from "../assets/link-icon-2.png";
 import arrowaleft from "../assets/arrow-left.png";
 import arrowright from "../assets/arrow-right.png";
+import AnimatedSection from '../components/animations/AnimatedSection'
 
 const slides = [
   {
@@ -22,11 +24,24 @@ const slides = [
   },
 ];
 
+const slideVariants = {
+  enter: (dir: number) => ({ x: dir > 0 ? 80 : -80, opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (dir: number) => ({ x: dir > 0 ? -80 : 80, opacity: 0 }),
+};
+
 export default function TrendsTalk() {
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-  const prev = () => setCurrent((c) => (c === 0 ? slides.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === slides.length - 1 ? 0 : c + 1));
+  const prev = () => {
+    setDirection(-1);
+    setCurrent((c) => (c === 0 ? slides.length - 1 : c - 1));
+  };
+  const next = () => {
+    setDirection(1);
+    setCurrent((c) => (c === slides.length - 1 ? 0 : c + 1));
+  };
 
   const slide = slides[current];
 
@@ -36,8 +51,7 @@ export default function TrendsTalk() {
         <div className="w-full rounded-[20px] bg-[linear-gradient(337.71deg,rgba(0,153,93,0)_.01%,#00FF9B_90.12%)] p-[2.8px]">
           <div className="flex flex-col lg:flex-row-reverse h-full w-full p-5 sm:p-8 lg:p-15 rounded-[18px] bg-[linear-gradient(320.71deg,rgba(0,153,93,0)_60%,rgba(0,255,155,0.25)_100%),linear-gradient(#010C28,#010C28)]">
 
-            {/* Conteúdo texto */}
-            <div className="trend-cast content mb-6 lg:mb-0 lg:w-1/2 p-2 sm:p-4 lg:p-10 text-right flex flex-col justify-between">
+            <AnimatedSection variant="slideRight" className="trend-cast content mb-6 lg:mb-0 lg:w-1/2 p-2 sm:p-4 lg:p-10 text-right flex flex-col justify-between">
               <div className="title">
                 <h4>TrendsTalk</h4>
                 <h1>Tendências & Inovações</h1>
@@ -48,35 +62,41 @@ export default function TrendsTalk() {
                   <strong className="text-[#00FF9B] italic"> as inovações mais atuais do mercado.</strong>
                 </p>
               </div>
-            </div>
+            </AnimatedSection>
 
-            {/* Carrossel */}
-            <div className="trend-cast slide flex items-center gap-3 sm:gap-4 lg:gap-6 lg:w-1/2">
-              <button onClick={prev} className="shrink-0 cursor-pointer hover:opacity-70 transition-opacity">
+            <AnimatedSection variant="slideLeft" delay={0.2} className="trend-cast slide flex items-center gap-3 sm:gap-4 lg:gap-6 lg:w-1/2">
+              <motion.button onClick={prev} className="shrink-0 cursor-pointer" whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}>
                 <img src={arrowaleft} alt="Anterior" className="w-6 sm:w-8 lg:w-12" />
-              </button>
+              </motion.button>
 
-              <div className="relative flex flex-col justify-start w-full overflow-hidden rounded-t-[20px]">
-                <img
-                  src={slide.image}
-                  alt={slide.name}
-                  className="w-full h-auto rounded-t-[20px] object-cover"
-                />
-                <div className="rounded-tr-[60px] sm:rounded-tr-[90px] lg:rounded-tr-[120px] bottom-0 left-0 absolute bg-[linear-gradient(230.71deg,rgba(0,153,93,0)_0.01%,#00FF9B_94.12%)] p-[1.7px] overflow-hidden">
-                  <div className="content-wrapper rounded-tr-[60px] sm:rounded-tr-[90px] lg:rounded-tr-[120px] px-4 pt-6 pb-4 sm:px-6 sm:pt-10 sm:pb-6 lg:px-10 lg:pt-20 lg:pb-10">
-                    <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 lg:mb-6">{slide.name}</h3>
-                    <p className="font-thin text-sm sm:text-lg lg:text-xl leading-5 sm:leading-7 lg:leading-8">
-                      {slide.description}
-                    </p>
-                    <img src={linkicon} alt="" className="link-icon w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 self-end mt-3 sm:mt-5 lg:mt-8 mx-2" />
-                  </div>
-                </div>
+              <div className="relative w-full overflow-hidden">
+                <AnimatePresence mode="wait" custom={direction}>
+                  <motion.div
+                    key={current}
+                    custom={direction}
+                    variants={slideVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    className="relative flex flex-col justify-start w-full overflow-hidden rounded-t-[20px]"
+                  >
+                    <img src={slide.image} alt={slide.name} className="w-full h-auto rounded-t-[20px] object-cover" />
+                    <div className="rounded-tr-[60px] sm:rounded-tr-[90px] lg:rounded-tr-[120px] bottom-0 left-0 absolute bg-[linear-gradient(230.71deg,rgba(0,153,93,0)_0.01%,#00FF9B_94.12%)] p-[1.7px] overflow-hidden">
+                      <div className="content-wrapper rounded-tr-[60px] sm:rounded-tr-[90px] lg:rounded-tr-[120px] px-4 pt-6 pb-4 sm:px-6 sm:pt-10 sm:pb-6 lg:px-10 lg:pt-20 lg:pb-10">
+                        <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 lg:mb-6">{slide.name}</h3>
+                        <p className="font-thin text-sm sm:text-lg lg:text-xl leading-5 sm:leading-7 lg:leading-8">{slide.description}</p>
+                        <img src={linkicon} alt="" className="link-icon w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 self-end mt-3 sm:mt-5 lg:mt-8 mx-2 cursor-pointer" />
+                      </div>
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
-              <button onClick={next} className="shrink-0 cursor-pointer hover:opacity-70 transition-opacity">
+              <motion.button onClick={next} className="shrink-0 cursor-pointer" whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}>
                 <img src={arrowright} alt="Próximo" className="w-6 sm:w-8 lg:w-12" />
-              </button>
-            </div>
+              </motion.button>
+            </AnimatedSection>
 
           </div>
         </div>

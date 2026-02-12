@@ -2,6 +2,7 @@
 import grayarrow from '../assets/gray-arrow.png'
 import greenarrow from '../assets/green-arrow.png'
 import arrowdown from '../assets/arrow-down.png'
+import AnimatedSection from '../components/animations/AnimatedSection'
 
 export default function Programacao() {
   return (
@@ -11,9 +12,11 @@ export default function Programacao() {
 
         <div className="w-full rounded-[20px] bg-[linear-gradient(160.71deg,rgba(0,153,93,0)_0.01%,#00FF9B_94.12%)] p-[1.7px] lg:h-full">
           <div className="flex flex-col items-center gap-10 sm:gap-16 lg:gap-40 py-10 sm:py-20 lg:py-40 pb-16 sm:pb-32 lg:pb-90 px-4 sm:px-6 lg:px-10 h-full w-full bg-[#010C28] rounded-[20px]">
-              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-white text-center">Programação</h1>
+              <AnimatedSection variant="scaleIn">
+                <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold text-white text-center">Programação</h1>
+              </AnimatedSection>
               <div className="mini-shadow flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-10 w-full">
-                <div className="w-full lg:max-w-[700px] p-4 sm:p-6 lg:p-10 rounded-[20px] bg-[linear-gradient(66.3deg,rgba(2,22,75,0)_-35.26%,#021E69_91.92%)]">
+                <AnimatedSection variant="slideLeft" className="w-full lg:max-w-[700px] p-4 sm:p-6 lg:p-10 rounded-[20px] bg-[linear-gradient(66.3deg,rgba(2,22,75,0)_-35.26%,#021E69_91.92%)]">
                   <ul>
                     <li className='flex justify-between mb-4 sm:mb-6 lg:mb-10 items-center'>
                        <p className="text-xl sm:text-2xl lg:text-4xl font-bold">Manhã</p>
@@ -50,8 +53,8 @@ export default function Programacao() {
                         <p className="text-sm sm:text-xl lg:text-4xl text-gray-400">Intervalo para almoço livre</p>
                     </li>
                   </ul>
-                </div>
-                 <div className="w-full lg:max-w-[700px] p-4 sm:p-6 lg:p-10 rounded-[20px] bg-[linear-gradient(250.35deg,rgba(2,22,75,0)_-9.78%,#021E69_87.8%)]">
+                </AnimatedSection>
+                 <AnimatedSection variant="slideRight" delay={0.2} className="w-full lg:max-w-[700px] p-4 sm:p-6 lg:p-10 rounded-[20px] bg-[linear-gradient(250.35deg,rgba(2,22,75,0)_-9.78%,#021E69_87.8%)]">
                   <ul>
                     <li className='flex justify-between mb-4 sm:mb-6 lg:mb-10 items-center'>
                        <p className="text-xl sm:text-2xl lg:text-4xl font-bold">Tarde</p>
@@ -88,7 +91,7 @@ export default function Programacao() {
                         <p className="text-sm sm:text-xl lg:text-4xl">Happy Hour</p>
                     </li>
                   </ul>
-                </div>
+                </AnimatedSection>
               </div>
 
           </div>

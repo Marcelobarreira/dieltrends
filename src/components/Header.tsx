@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import logo from '../assets/logo.png'
 
 const navLinks = [
@@ -12,7 +13,12 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#010C28]/90 backdrop-blur-sm">
+    <motion.header
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="fixed top-0 left-0 w-full z-50 bg-[#010C28]/90 backdrop-blur-sm"
+    >
       <div className="container-app">
         <div className="flex items-center justify-between h-24 lg:h-[120px]">
           {/* Logo */}
@@ -26,19 +32,28 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
-            {navLinks.map((link) => (
-              <a
+            {navLinks.map((link, i) => (
+              <motion.a
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-gray-300 transition-colors text-[22px] font-medium whitespace-nowrap"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+                className="relative text-white hover:text-white transition-colors text-[22px] font-medium whitespace-nowrap group"
               >
                 {link.label}
-              </a>
+                <span className="absolute -bottom-1 left-0 h-[2px] w-full origin-right scale-x-0 bg-[#00FF9B] transition-transform duration-300 ease-out group-hover:origin-left group-hover:scale-x-100" />
+              </motion.a>
             ))}
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-2">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="hidden lg:flex items-center gap-2"
+          >
             {/* Botão ícone */}
             <button className="w-[58px] h-[58px] bg-[#00FF9B] rounded-[7px] flex items-center justify-center hover:bg-[#00e68a] transition-colors shrink-0 cursor-pointer">
               <div className="w-[42px] h-[42px] border-[2.5px] border-black rounded-[7px] flex items-center justify-center">
@@ -63,7 +78,7 @@ export default function Header() {
             >
               Garantir ingresso
             </a>
-          </div>
+          </motion.div>
 
           {/* Mobile Menu Button */}
           <button
@@ -82,48 +97,66 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden pb-6 border-t border-white/10 pt-4">
-            <nav className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-gray-300 hover:text-white transition-colors text-base font-medium py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <div className="flex items-center gap-2 mt-4">
-                <button className="w-12 h-12 bg-[#00FF9B] rounded-[7px] flex items-center justify-center hover:bg-[#00e68a] transition-colors shrink-0 cursor-pointer">
-                  <div className="w-9 h-9 border-[2.5px] border-black rounded-[7px] flex items-center justify-center">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="black"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="lg:hidden overflow-hidden"
+            >
+              <div className="pb-6 border-t border-white/10 pt-4">
+                <nav className="flex flex-col gap-4">
+                  {navLinks.map((link, i) => (
+                    <motion.a
+                      key={link.href}
+                      href={link.href}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: i * 0.05 }}
+                      className="text-gray-300 hover:text-white transition-colors text-base font-medium py-2"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
-                      <path d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                  </div>
-                </button>
-                <a
-                  href="#inscricao"
-                  className="flex-1 bg-[#00FF9B] text-black px-6 py-3 rounded-[7px] font-medium text-center hover:bg-[#00e68a] transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Garantir ingresso
-                </a>
+                      {link.label}
+                    </motion.a>
+                  ))}
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.2 }}
+                    className="flex items-center gap-2 mt-4"
+                  >
+                    <button className="w-12 h-12 bg-[#00FF9B] rounded-[7px] flex items-center justify-center hover:bg-[#00e68a] transition-colors shrink-0 cursor-pointer">
+                      <div className="w-9 h-9 border-[2.5px] border-black rounded-[7px] flex items-center justify-center">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="black"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                      </div>
+                    </button>
+                    <a
+                      href="#inscricao"
+                      className="flex-1 bg-[#00FF9B] text-black px-6 py-3 rounded-[7px] font-medium text-center hover:bg-[#00e68a] transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Garantir ingresso
+                    </a>
+                  </motion.div>
+                </nav>
               </div>
-            </nav>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </header>
+    </motion.header>
   )
 }

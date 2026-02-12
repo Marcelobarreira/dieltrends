@@ -1,4 +1,4 @@
-import fotoEsquerda from '../assets/foto-esquerda.png'
+import fotoEsquerda from '../assets/foto-card-slide.png'
 import fotoDireita from '../assets/foto-direita.png'
 
 export default function PerfilPublico() {

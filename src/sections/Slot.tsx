@@ -99,7 +99,7 @@ export default function Slot() {
                       <div className="content-wrapper p-4 sm:p-8 lg:p-[50.5px] rounded-tl-[60px] sm:rounded-tl-[90px] lg:rounded-tl-[120px]">
                         <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold">{slide.name}</h3>
                         <p className="font-light text-sm sm:text-lg lg:text-xl leading-5 sm:leading-7 lg:leading-8">{slide.description}</p>
-                        <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0 text-xl sm:text-3xl lg:text-[50.14px] font-normal leading-[103%] text-white mt-3 lg:mt-8">in</span>
+                        <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0 text-xl sm:text-3xl lg:text-3xl xl:text-[50.14px] font-normal leading-[103%] text-white mt-3 lg:mt-8">in</span>
                       </div>
                     </div>
                   </motion.div>

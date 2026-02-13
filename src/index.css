@@ -61,43 +61,43 @@ body {
 
 @media (min-width: 640px) {
   .container-app {
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 }
 
 @media (min-width: 768px) {
   .container-app {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 64px;
+    padding-right: 64px;
   }
 }
 
 @media (min-width: 1024px) {
   .container-app {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
 @media (min-width: 1280px) {
+  .container-app {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
+
+@media (min-width: 1536px) {
   .container-app {
     padding-left: 200px;
     padding-right: 200px;
   }
 }
 
-@media (min-width: 1536px) {
-  .container-app {
-    padding-left: 250px;
-    padding-right: 250px;
-  }
-}
-
 @media (min-width: 1920px) {
   .container-app {
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 280px;
+    padding-right: 280px;
   }
 }
 
@@ -186,6 +186,12 @@ body {
   .trend-cast.content .description strong { font-size: 22px; }
 }
 @media (min-width: 1024px) {
+  .trend-cast.content .title h4 { font-size: 26px; }
+  .trend-cast.content .title h1 { font-size: 52px; }
+  .trend-cast.content .description p { font-size: 24px; }
+  .trend-cast.content .description strong { font-size: 24px; }
+}
+@media (min-width: 1280px) {
   .trend-cast.content .title h4 { font-size: 35.12px; }
   .trend-cast.content .title h1 { font-size: 80px; }
   .trend-cast.content .description p { font-size: 34.86px; }
@@ -210,6 +216,9 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .trend-cast.slide .content-wrapper .name { font-size: 36px; }
+}
+@media (min-width: 1280px) {
   .trend-cast.slide .content-wrapper .name { font-size: 50px; }
 }
 

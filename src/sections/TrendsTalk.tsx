@@ -85,7 +85,7 @@ export default function TrendsTalk() {
                       <div className="content-wrapper rounded-tr-[60px] sm:rounded-tr-[90px] lg:rounded-tr-[120px] px-4 pt-6 pb-4 sm:px-6 sm:pt-10 sm:pb-6 lg:px-10 lg:pt-20 lg:pb-10">
                         <h3 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 lg:mb-6">{slide.name}</h3>
                         <p className="font-thin text-sm sm:text-lg lg:text-xl leading-5 sm:leading-7 lg:leading-8">{slide.description}</p>
-                        <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0 text-xl sm:text-3xl lg:text-[50.14px] font-normal leading-[103%] text-white mt-3 sm:mt-5 lg:mt-8 mx-2">in</span>
+                        <span className="self-end cursor-pointer border border-[#005CFC] rounded-[10px] px-2 py-0 text-xl sm:text-3xl lg:text-3xl xl:text-[50.14px] font-normal leading-[103%] text-white mt-3 sm:mt-5 lg:mt-8 mx-2">in</span>
                       </div>
                     </div>
                   </motion.div>

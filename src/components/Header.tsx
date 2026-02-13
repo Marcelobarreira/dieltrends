@@ -26,12 +26,12 @@ export default function Header() {
             <img
               src={logo}
               alt="Diel Trends"
-              className="h-10 sm:h-12 lg:w-[270px] lg:h-[88px] object-contain"
+              className="h-10 sm:h-12 lg:w-[200px] lg:h-[65px] xl:w-[270px] xl:h-[88px] object-contain"
             />
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-8 2xl:gap-12">
             {navLinks.map((link, i) => (
               <motion.a
                 key={link.href}
@@ -39,7 +39,7 @@ export default function Header() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                className="relative text-white hover:text-white transition-colors text-[22px] font-medium whitespace-nowrap group"
+                className="relative text-white hover:text-white transition-colors text-base xl:text-lg 2xl:text-[22px] font-medium whitespace-nowrap group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 h-[2px] w-full origin-right scale-x-0 bg-[#00FF9B] transition-transform duration-300 ease-out group-hover:origin-left group-hover:scale-x-100" />
@@ -55,8 +55,8 @@ export default function Header() {
             className="hidden lg:flex items-center gap-2"
           >
             {/* Botão ícone */}
-            <button className="w-[58px] h-[58px] bg-[#00FF9B] rounded-[7px] flex items-center justify-center hover:bg-[#00e68a] transition-colors shrink-0 cursor-pointer">
-              <div className="w-[42px] h-[42px] border-[2.5px] border-black rounded-[7px] flex items-center justify-center">
+            <button className="w-[46px] h-[46px] xl:w-[58px] xl:h-[58px] bg-[#00FF9B] rounded-[7px] flex items-center justify-center hover:bg-[#00e68a] transition-colors shrink-0 cursor-pointer">
+              <div className="w-[34px] h-[34px] xl:w-[42px] xl:h-[42px] border-[2.5px] border-black rounded-[7px] flex items-center justify-center">
                 <svg
                   width="18"
                   height="18"
@@ -74,7 +74,7 @@ export default function Header() {
             {/* Botão Garantir ingresso */}
             <a
               href="#inscricao"
-              className="bg-[#00FF9B] text-black w-[233px] h-[58px] flex items-center justify-center rounded-[7px] font-medium text-xl hover:bg-[#00e68a] transition-colors whitespace-nowrap"
+              className="bg-[#00FF9B] text-black w-[180px] h-[46px] xl:w-[233px] xl:h-[58px] flex items-center justify-center rounded-[7px] font-medium text-base xl:text-xl hover:bg-[#00e68a] transition-colors whitespace-nowrap"
             >
               Garantir ingresso
             </a>

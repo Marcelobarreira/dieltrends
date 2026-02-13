@@ -61,43 +61,43 @@ body {
 
 @media (min-width: 640px) {
   .container-app {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container-app {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container-app {
     padding-left: 64px;
     padding-right: 64px;
   }
 }
 
-@media (min-width: 1280px) {
-  .container-app {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-}
-
-@media (min-width: 1536px) {
+@media (min-width: 768px) {
   .container-app {
     padding-left: 100px;
     padding-right: 100px;
   }
 }
 
+@media (min-width: 1024px) {
+  .container-app {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-app {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container-app {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+
 @media (min-width: 1920px) {
   .container-app {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 300px;
+    padding-right: 300px;
   }
 }
 
